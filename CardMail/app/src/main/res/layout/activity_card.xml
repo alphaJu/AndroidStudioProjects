@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardActivity">
+
+    <RelativeLayout
+        android:id="@+id/card"
+        android:layout_width="315dp"
+        android:layout_height="445dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/minion_default_background"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/receiverTextView"
+            android:padding="16dp"
+            android:text="Dear my best friend,"
+            android:textColor="@android:color/white"
+            style="@style/CardNameStyle"/>
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_below="@+id/receiverTextView"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="May this day be full of fun, happines and laughter! Have the happiest birthday ever!"
+            android:textColor="@android:color/white"
+            style="@style/CardMessageStyle" />
+
+        <TextView
+            android:id="@+id/senderTextView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"
+            android:text="Anonymous Admirer"
+            android:textColor="@android:color/white"
+            style="@style/CardNameStyle" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:text="send"
+        android:layout_centerHorizontal="true"
+        android:onClick="sendCard"/>
+
+</RelativeLayout>
